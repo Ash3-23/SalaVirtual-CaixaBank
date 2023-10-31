@@ -29,7 +29,7 @@
   align-items: center;
   gap: 10px;
   text-align: center;
-  max-width: 300px;
+  max-width: 100%;
 }
 
 .info-frame-text {
@@ -69,5 +69,7 @@
   .info-frame-text {
     font-size: 12px;
     font-weight: 500;
+    max-width: 50%;
+    flex-wrap: wrap;
   }
 }

@@ -1,0 +1,38 @@
+.action-buttons {
+  display: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.action-buttons-modificar,
+.action-buttons-cancelar {
+  background: #fff;
+  color: #007EAE;
+  font-size: 22px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid #4CA4C6;
+  width: 150px;
+  /* Ancho automático para adaptarse al contenido */
+  max-width: 100%;
+  margin: 5px;
+}
+.boton-secondario-modificar2:hover,
+.botn-secundario2:hover {
+background: #007dae;
+/* Color de fondo al pasar el cursor */
+color: #fff;
+/* Color de texto al pasar el cursor */
+}
+
+@media (max-width: 768px) {
+  .boton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+}

@@ -34,8 +34,35 @@
   font-weight: 600;
   line-height: 20px;
   padding: 20px;
-  white-space: wrap;
+  white-space: nowrap;
+  opacity: 1;
+  animation: fade-in 1s ease-in-out;
+
+  /* Añadimos una transformación para mover el texto desde la derecha */
+  transform: translateX(0%);
 }
+
+.sala-title.hidden {
+  opacity: 1; /* Cuando está oculto, lo haces completamente transparente */
+  transform: translateX(0%); /* Y lo mueves fuera de la pantalla a la derecha */
+}
+
+.sala-title.visible {
+  opacity: 1; /* Cuando es visible, lo haces completamente visible */
+  transform: translateX(0%); /* Y lo mueves a su posición original */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 .sala-buttons {
   display: flex;
@@ -53,6 +80,7 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  text-decoration: none;
   border-radius: 50px;
   border: 1px solid #4CA4C6;
   width: 150px;
