@@ -8,7 +8,6 @@ const NavBar = () => {
   const [tiempoRestante, setTiempoRestante] = useState(300); // 5 minutos en segundos
   const tiempoTotal = 300; // 5 minutos en segundos
   const [titulo, setTitulo] = useState('Sala Virtual');
-  const [transicionTerminada, setTransicionTerminada] = useState(true);
 
   const minutosRestantes = Math.floor(tiempoRestante / 60);
 
@@ -35,13 +34,25 @@ const NavBar = () => {
     };
   }, [tiempoRestante]);
 
+  useEffect(() => {
+    // Verifica si el mensaje de bienvenida ya se mostró antes
+    const bienvenidaYaMostrada = localStorage.getItem('bienvenidaMostrada');
+
+    if (!bienvenidaYaMostrada) {
+      // Mostrar el mensaje de bienvenida por primera vez
+      setTitulo('Bienvenido!');
+      // Marcar que la bienvenida se ha mostrado en localStorage
+      localStorage.setItem('bienvenidaMostrada', 'true');
+    }
+  }, []);
+
   return (
     <div className="desktop-content">
       <Link to='/'>
         <img className="logo-caixabank" alt="Logo caixabank" src={logo} />
       </Link>
       <div className="sala-details">
-        <div className={`sala-title ${transicionTerminada ? 'visible' : 'hidden'}`}>
+        <div className={`sala-title`}>
           {titulo}
         </div>
         <div className="sala-buttons">
