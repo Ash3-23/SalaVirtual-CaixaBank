@@ -3,21 +3,27 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeVirtualPage from './pages/HomeVirtualPage/HomeVirtualPage';
 import HeaderLayout from './components/HeaderLayout/HeaderLayout';
 import ModificatedPage from './pages/ModificatedPage/ModificatedPage';
+import TuTurno from './pages/TurnPage/TurnPage';
+import { TimeProvider } from './context/TimeContext/TimeContext'; // Importa el TimeProvider
+
 
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomeVirtualPage />} />
-          <Route element={<HeaderLayout />}>
-          <Route path="/modificar-cita" element={<ModificatedPage />} />
+        <TimeProvider>
+          <Routes>
+            <Route path="/" element={<HomeVirtualPage />} />
+            <Route element={<HeaderLayout />}>
+              <Route path="/modificar-cita" element={<ModificatedPage />} />
 
-            {/* A PARTIR DE AQUÍ LAS PÁGINAS SE MUESTRAN CON EL HEADERLAYOUT Y EL MENU PRINCIPAL DE LA PÁGINA */}
-            {/* <Route path="/locals" element={<Locals />} /> */}
-          </Route>
-        </Routes>
+              {/* A PARTIR DE AQUÍ LAS PÁGINAS SE MUESTRAN CON EL HEADERLAYOUT Y EL MENU PRINCIPAL DE LA PÁGINA */}
+              <Route path="/tu-turno" element={<TuTurno />} />
+            </Route>
+          </Routes>
+        </TimeProvider>
+
       </BrowserRouter>
     </>
   );

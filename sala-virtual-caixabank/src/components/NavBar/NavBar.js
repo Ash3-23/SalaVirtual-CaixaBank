@@ -3,56 +3,42 @@ import logo from '../../images/Logo-CaixaBank-1 1.png';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 import ActionButtons from '../ActionButtons/ActionButtons';
-import axios from 'axios'; // Asegúrate de que axios esté instalado
+import axios from 'axios';
+import { useTime } from '../../context/TimeContext/TimeContext'; // Importa el hook useTime
 
 
 const NavBar = () => {
-  const [tiempoRestante, setTiempoRestante] = useState(300); // 5 minutos en segundos
+  const { tiempoRestante, setTiempoRestante } = useTime(); // Obtiene el tiempo de espera desde el contexto
+
   const tiempoTotal = 300; // 5 minutos en segundos
   const [titulo, setTitulo] = useState('Sala Virtual');
-  const [posicionEnCola, setPosicionEnCola] = useState(1);
+  const storedPosition = localStorage.getItem('posicionEnCola');
+  const [posicionEnCola, setPosicionEnCola] = useState(storedPosition ? parseInt(storedPosition, 10) : 0);
 
   const minutosRestantes = Math.floor(tiempoRestante / 60);
 
   useEffect(() => {
-    const bienvenidaYaMostrada = localStorage.getItem('bienvenidaMostrada');
-
-    if (!bienvenidaYaMostrada) {
-      setTitulo('Bienvenido!');
-      localStorage.setItem('bienvenidaMostrada', 'true');
-
-      // Realiza una solicitud POST al servidor para agregar el cliente a la cola
-      axios.post('http://localhost:4000/agregar-cliente', { nombre: 'NombreCliente' })
+    // Verifica si la posición en la cola ya está en el localStorage
+    const storedPosition = localStorage.getItem('posicionEnCola');
+    
+    if (!storedPosition) {
+      // Si no está en el localStorage, realiza la solicitud al servidor
+      axios.post('http://localhost:4000/agregar-cliente')
         .then((response) => {
           const nuevaPosicion = response.data.posicion;
+    
+          // Actualiza el estado local con la nueva posición
           setPosicionEnCola(nuevaPosicion);
-
-          // Guardar la posición en el LocalStorage
-          localStorage.setItem('posicionEnCola', nuevaPosicion);
+    
+          // Almacena la posición en el localStorage
+          localStorage.setItem('posicionEnCola', nuevaPosicion.toString());
         })
         .catch((error) => {
-          console.error('Error al obtener la posición:', error);
+          console.error('Error al obtener la posición en cola:', error);
         });
-    } else {
-      // Cargar la posición almacenada en el LocalStorage al cargar la página
-      const posicionAlmacenada = localStorage.getItem('posicionEnCola');
-      if (posicionAlmacenada) {
-        setPosicionEnCola(Number(posicionAlmacenada));
-      }
     }
   }, []);
-
-  useEffect(() => {
-    // Actualiza la posición cuando el tiempo de espera se agota
-    if (tiempoTotal <= 0) {
-      const posicion = localStorage.getItem('posicionEnCola');
-      if (posicion) {
-        const nuevaPosicion = Number(posicion) + 1;
-        setPosicionEnCola(nuevaPosicion);
-        localStorage.setItem('posicionEnCola', nuevaPosicion);
-      }
-    }
-  }, [tiempoTotal]);
+  
 
   useEffect(() => {
     const barra = document.querySelector('.tiempo-espera-fill');
@@ -68,8 +54,7 @@ const NavBar = () => {
     }, 1000);
 
     if (tiempoRestante <= 0) {
-      // Aquí puedes agregar el código para mostrar el componente "suTurno"
-      // por ejemplo, cambiando el estado o navegando a una nueva pantalla.
+      window.location.href = '/tu-turno';
     }
 
     return () => {
@@ -119,11 +104,9 @@ const NavBar = () => {
           <div className="tiempo-espera-fill"></div>
         </div>
       </div>
-     
-        <p className="sala-p">
-          Tu posición en la cola: {posicionEnCola}
-        </p>
-
+      <p className='sala-p'>
+        Tu posición en la cola: {posicionEnCola}
+      </p>
       <div className="sala-buttons2">
         <ActionButtons />
       </div>

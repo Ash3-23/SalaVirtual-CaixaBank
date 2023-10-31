@@ -1,11 +1,7 @@
 .desktop-sala {
   background-color: #ffffff;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* Centra el contenido horizontalmente */
+  
   text-align: center;
   /* Alinea el texto al centro */
 }

@@ -1,0 +1,232 @@
+/* TuTurno.css */
+
+.desktop-modal-su {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop-modal-su .div-2 {
+  background-color: #ffffff;
+  height: 1024px;
+  position: relative;
+  width: 1440px;
+}
+
+.desktop-modal-su .overlap-group {
+  height: 312px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.desktop-modal-su .logo-caixabank {
+  height: 221px;
+  left: 542px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 355px;
+}
+
+.desktop-modal-su .rectangle {
+  background-color: var(--caixa);
+  height: 133px;
+  left: 0;
+  position: absolute;
+  top: 179px;
+  width: 1440px;
+}
+
+.desktop-modal-su .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-size: 50px;
+  font-weight: 600;
+  left: 126px;
+  letter-spacing: -1.1px;
+  line-height: 75px;
+  position: absolute;
+  top: 207px;
+  white-space: nowrap;
+}
+
+.desktop-modal-su .boton-modificar-instance {
+  height: 48px !important;
+  left: 1118px !important;
+  position: absolute !important;
+  top: 216px !important;
+  width: 164px !important;
+}
+
+.desktop-modal-su .design-component-instance-node {
+  font-family: var(--web-texto-botones-font-family) !important;
+  font-size: var(--web-texto-botones-font-size) !important;
+  font-style: var(--web-texto-botones-font-style) !important;
+  font-weight: var(--web-texto-botones-font-weight) !important;
+  letter-spacing: var(--web-texto-botones-letter-spacing) !important;
+  line-height: var(--web-texto-botones-line-height) !important;
+  margin-bottom: -2px !important;
+  margin-top: -4px !important;
+}
+
+.desktop-modal-su .botn-cancelar {
+  height: 48px !important;
+  left: 912px !important;
+  position: absolute !important;
+  top: 216px !important;
+  width: 164px !important;
+}
+
+.desktop-modal-su .p {
+  color: var(--gris-subttulos);
+  font-family: var(--h2-web-semibold-font-family);
+  font-size: var(--h2-web-semibold-font-size);
+  font-style: var(--h2-web-semibold-font-style);
+  font-weight: var(--h2-web-semibold-font-weight);
+  left: 474px;
+  letter-spacing: var(--h2-web-semibold-letter-spacing);
+  line-height: var(--h2-web-semibold-line-height);
+  position: absolute;
+  text-align: center;
+  top: 365px;
+  white-space: nowrap;
+}
+
+.desktop-modal-su .text-wrapper-3 {
+  color: var(--gris-subttulos);
+  font-family: var(--h2-web-semibold-font-family);
+  font-size: var(--h2-web-semibold-font-size);
+  font-style: var(--h2-web-semibold-font-style);
+  font-weight: var(--h2-web-semibold-font-weight);
+  left: 610px;
+  letter-spacing: var(--h2-web-semibold-letter-spacing);
+  line-height: var(--h2-web-semibold-line-height);
+  position: absolute;
+  text-align: center;
+  top: 511px;
+  white-space: nowrap;
+}
+
+.desktop-modal-su .text-wrapper-4 {
+  color: var(--gris-texto);
+  font-family: var(--web-texto-minutos-font-family);
+  font-size: var(--web-texto-minutos-font-size);
+  font-style: var(--web-texto-minutos-font-style);
+  font-weight: var(--web-texto-minutos-font-weight);
+  left: 660px;
+  letter-spacing: var(--web-texto-minutos-letter-spacing);
+  line-height: var(--web-texto-minutos-line-height);
+  position: absolute;
+  text-align: center;
+  top: 424px;
+  white-space: nowrap;
+}
+
+.desktop-modal-su .https-lottiefiles {
+  height: 122px;
+  left: 640px;
+  object-fit: cover;
+  position: absolute;
+  top: 562px;
+  width: 160px;
+}
+
+.desktop-modal-su .frame {
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 244px;
+  left: 470px;
+  overflow: hidden;
+  position: absolute;
+  top: 713px;
+  width: 500px;
+}
+
+.desktop-modal-su .text-wrapper-5 {
+  color: var(--gris-subttulos);
+  font-family: var(--h2-web-semibold-font-family);
+  font-size: var(--h2-web-semibold-font-size);
+  font-style: var(--h2-web-semibold-font-style);
+  font-weight: var(--h2-web-semibold-font-weight);
+  left: 41px;
+  letter-spacing: var(--h2-web-semibold-letter-spacing);
+  line-height: var(--h2-web-semibold-line-height);
+  position: absolute;
+  text-align: center;
+  top: 23px;
+  white-space: nowrap;
+}
+
+.desktop-modal-su .text-wrapper-6 {
+  color: var(--gris-texto);
+  font-family: var(--web-texto-botones-font-family);
+  font-size: var(--web-texto-botones-font-size);
+  font-style: var(--web-texto-botones-font-style);
+  font-weight: var(--web-texto-botones-font-weight);
+  left: 115px;
+  letter-spacing: var(--web-texto-botones-letter-spacing);
+  line-height: var(--web-texto-botones-line-height);
+  position: absolute;
+  text-align: center;
+  top: 168px;
+  white-space: nowrap;
+}
+
+.desktop-modal-su .frame-2 {
+  align-items: center;
+  display: inline-flex;
+  gap: 14px;
+  left: 41px;
+  position: absolute;
+  top: 90px;
+}
+
+.desktop-modal-su .frame-3 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+}
+
+.desktop-modal-su .ellipse {
+  background-color: var(--caixa);
+  border-radius: 30px;
+  height: 60px;
+  position: relative;
+  width: 60px;
+}
+
+.desktop-modal-su .text-wrapper-7 {
+  color: #ffffff;
+  font-family: var(--motivo-texto-font-family);
+  font-size: var(--motivo-texto-font-size);
+  font-style: var(--motivo-texto-font-style);
+  font-weight: var(--motivo-texto-font-weight);
+  left: 15px;
+  letter-spacing: var(--motivo-texto-letter-spacing);
+  line-height: var(--motivo-texto-line-height);
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  white-space: nowrap;
+}
+
+.desktop-modal-su .text-wrapper-8 {
+  color: var(--gris-texto);
+  font-family: var(--web-texto-botones-font-family);
+  font-size: var(--web-texto-botones-font-size);
+  font-style: var(--web-texto-botones-font-style);
+  font-weight: var(--web-texto-botones-font-weight);
+  letter-spacing: var(--web-texto-botones-letter-spacing);
+  line-height: var(--web-texto-botones-line-height);
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
