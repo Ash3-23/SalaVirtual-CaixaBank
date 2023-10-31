@@ -1,32 +1,32 @@
 import React from "react";
-// import { BotonCancelar } from "./BotonCancelar"; // Asegúrate de importar el componente correcto
-// import { BotonModificar } from "./BotonModificar"; // Asegúrate de importar el componente correcto
+import logo from '../../images/Logo-CaixaBank-1 1.png'
 import "./TurnPage.css";
+import LogoCaixa from "../../components/LogoCaixa/LogoCaixa";
+import notification from '../../images/Notification.gif';
+import counter from '../../images/counter.png';
+import icon from '../../images/Frame 33707.png';
 
 const TuTurno = () => {
   return (
-    <div className="desktop-modal-su">
-      <div className="div-2">
-        <div className="overlap-group">
-          <img className="logo-caixabank" alt="Logo caixabank" src="logo-caixabank-1-1.png" />
-          <div className="rectangle" />
-          <div className="text-wrapper-2">Sala Virtual</div>
-          {/* <BotonModificar className="boton-modificar-instance" /> */}
-          {/* <BotonCancelar className="boton-cancelar-instance" /> */}
-        </div>
-        <p className="p">El tiempo de espera ha terminado</p>
-        <div className="text-wrapper-3">¡Ya es tu turno!</div>
-        <div className="text-wrapper-4">00:00</div>
-        <img className="https-lottiefiles" alt="Https lottiefiles" src="notification-xapbf6gb4w.png" />
-        <div className="frame">
-          <div className="text-wrapper-5">Te atenderá:</div>
-          <div className="text-wrapper-6">Mesa: 5</div>
-          <div className="frame-2">
-            <div className="frame-3">
-              <div className="ellipse" />
-              <div className="text-wrapper-7">MC</div>
+    <div className="desktop-content">
+      <LogoCaixa />
+
+      <div className="desktop-modal-su">
+        <div className="div-2">
+          <div className="overlap-group">
+            <div className="component">
+              <p className="text-wrapper">El tiempo de espera ha terminado</p>
+              <div className="text-wrapper-2"><img className="counter" alt="counter" src={counter} /></div>
+              <div className="your-turn">¡Ya es tu turno!</div>
+              <img className="https-lottiefiles" alt="Https lottiefiles" src={notification} />
+              <div className="frame">
+                <div className="text-wrapper-3">Te atenderá:</div>
+                <div className="gestor-name"><img className="icon-img" alt="Frame" src={icon} />
+                  <div className="text-wrapper-8">MARIA CARMEN ALEJO GUERRA</div>
+                </div>
+                <div className="text-wrapper-4">Mesa: 5</div>
+              </div>
             </div>
-            <div className="text-wrapper-8">MARIA CARMEN ALEJO GUERRA</div>
           </div>
         </div>
       </div>

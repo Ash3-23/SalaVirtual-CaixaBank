@@ -14,12 +14,16 @@ function App() {
       <BrowserRouter>
         <TimeProvider>
           <Routes>
+            
             <Route path="/" element={<HomeVirtualPage />} />
+            <Route path="/tu-turno" element={<TuTurno />} />
+            <Route path="/modificar-cita" element={<ModificatedPage />} />
+
+
             <Route element={<HeaderLayout />}>
-              <Route path="/modificar-cita" element={<ModificatedPage />} />
+
 
               {/* A PARTIR DE AQUÍ LAS PÁGINAS SE MUESTRAN CON EL HEADERLAYOUT Y EL MENU PRINCIPAL DE LA PÁGINA */}
-              <Route path="/tu-turno" element={<TuTurno />} />
             </Route>
           </Routes>
         </TimeProvider>

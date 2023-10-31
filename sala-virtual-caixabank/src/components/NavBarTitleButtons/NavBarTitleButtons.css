@@ -1,0 +1,56 @@
+/* NavBarTitleButtons.css */
+.sala-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background: #007eae;
+  color: #fff;
+  max-width: 100%;
+  padding: 2%;
+  gap: 200px;
+}
+
+.sala-title {
+  color: #ffffff;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 20px;
+  white-space: nowrap;
+  opacity: 1;
+  animation: fade-in 1s ease-in-out;
+  transform: translateX(0%);
+}
+
+.sala-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.boton-secondario-modificar,
+.boton-secondario-modificar,
+.botn-secundario {
+  background: #fff;
+  color: #007EAE;
+  font-size: 22px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #4CA4C6;
+  max-width: 100%;
+  margin: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.boton-secondario-modificar:hover,
+.botn-secundario:hover {
+  background: #007dae;
+  color: #fff;
+}
