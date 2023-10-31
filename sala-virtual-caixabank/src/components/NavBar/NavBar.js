@@ -41,8 +41,13 @@ const NavBar = () => {
     if (!bienvenidaYaMostrada) {
       // Mostrar el mensaje de bienvenida por primera vez
       setTitulo('Bienvenido!');
-      // Marcar que la bienvenida se ha mostrado en localStorage
-      localStorage.setItem('bienvenidaMostrada', 'true');
+
+      // Establecer un temporizador para cambiar a "Sala Virtual" después de 5 segundos
+      setTimeout(() => {
+        setTitulo('Sala Virtual');
+        // Marcar que la bienvenida se ha mostrado en localStorage
+        localStorage.setItem('bienvenidaMostrada', 'true');
+      }, 5000); // Cambia después de 5 segundos
     }
   }, []);
 
