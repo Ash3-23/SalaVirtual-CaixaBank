@@ -1,0 +1,214 @@
+.desktop-content {
+  background-color: #ffffff;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Centra el texto en el centro de la pantalla */
+}
+
+.logo-caixabank {
+  max-width: 300px;
+  width: 100%;
+}
+
+.sala-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background: #007eae;
+  color: #fff;
+  max-width: 100%;
+  padding: 2%;
+  gap: 200px;
+}
+
+.sala-title {
+  color: #ffffff;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 20px;
+  white-space: wrap;
+}
+
+.sala-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.boton-secondario-modificar,
+.boton-secondario-modificar,
+.botn-secundario {
+  background: #fff;
+  color: #007EAE;
+  font-size: 22px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid #4CA4C6;
+  width: 150px;
+  /* Ancho automático para adaptarse al contenido */
+  max-width: 100%;
+  margin: 5px;
+  /* Añadir espacio entre los botones */
+  transition: background-color 0.3s, color 0.3s;
+  /* Agregar transición suave a los cambios */
+}
+
+.boton-secondario-modificar:hover,
+.botn-secundario:hover {
+  background: #007dae;
+  /* Color de fondo al pasar el cursor */
+  color: #fff;
+  /* Color de texto al pasar el cursor */
+}
+
+.tiempo-espera {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.tiempo-espera-label {
+  color: #333333;
+  padding: 18px;
+  padding-bottom: 25px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-size: 24px;
+  /* Reducir el tamaño de fuente en pantallas más pequeñas */
+  font-weight: 600;
+}
+
+.tiempo-espera-value {
+  color: #333;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-size: 30px;
+  /* Reducir el tamaño de fuente en pantallas más pequeñas */
+  font-weight: 600;
+}
+
+.tiempo-espera-barra {
+  width: 800px;
+  max-width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  /* Color de fondo de la barra */
+  border-radius: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.tiempo-espera-fill {
+  height: 100%;
+  width: 0;
+  /* Ancho inicial de la barra de progreso */
+  background-color: #007eae;
+  /* Color de la barra de progreso */
+  border-radius: 10px;
+  transition: width 1s linear;
+  /* Animación de llenado durante 1 segundo */
+}
+
+.sala-p {
+  color: #666666;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: -0.7px;
+  line-height: 8px;
+}
+
+.sala-buttons2 {
+  display: none;
+}
+
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+  .logo-caixabank {
+    margin-top: 20px;
+    /* Agregar margen superior para centrar el logo */
+  }
+
+  .sala-details {
+    padding: 3%;
+    flex-direction: column;
+  }
+
+  .sala-title {
+    font-size: 34px;
+    line-height: 35px;
+  }
+
+  .boton-secondario-modificar,
+  .botn-secundario {
+    padding: 5px 15px;
+  }
+
+  .tiempo-espera-label {
+    font-size: 18px;
+  }
+
+  .tiempo-espera-value {
+    font-size: 24px;
+  }
+
+  .sala-p {
+    font-size: 16px;
+  }
+
+  .tiempo-espera-barra {
+    width: 100%;
+  }
+
+  .sala-details {
+    gap: 0;
+  }
+
+  .logo-caixabank {
+    display: none;
+    /* Ocultar el logo en pantallas más pequeñas */
+  }
+
+  .sala-buttons {
+    display: none;
+  }
+
+  .sala-buttons2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .boton-secondario-modificar2,
+  .botn-secundario2 {
+    background: #fff;
+    color: #007EAE;
+    font-size: 22px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid #4CA4C6;
+    width: 150px;
+    /* Ancho automático para adaptarse al contenido */
+    max-width: 100%;
+    margin: 5px;
+  }
+  .boton-secondario-modificar2:hover,
+.botn-secundario2:hover {
+  background: #007dae;
+  /* Color de fondo al pasar el cursor */
+  color: #fff;
+  /* Color de texto al pasar el cursor */
+}
+}
