@@ -14,12 +14,19 @@ const NavBar = () => {
 
   // Función para asignar la posición en la cola
   const asignarPosicion = () => {
+    // Obtiene la última posición en la cola desde el almacenamiento local
     const posicion = localStorage.getItem('posicionEnCola');
+
     if (posicion) {
-      setPosicionEnCola(Number(posicion));
+      // Si ya hay una posición, incrementa en 1 la posición del nuevo cliente
+      setPosicionEnCola(Number(posicion) + 1);
     } else {
-      setPosicionEnCola(1); // Si no hay posición previa, asigna 1 como posición inicial
+      // Si no hay posición previa, asigna 1 como posición inicial
+      setPosicionEnCola(1);
     }
+
+    // Almacena la nueva posición en el almacenamiento local
+    localStorage.setItem('posicionEnCola', posicionEnCola);
   };
 
   useEffect(() => {
