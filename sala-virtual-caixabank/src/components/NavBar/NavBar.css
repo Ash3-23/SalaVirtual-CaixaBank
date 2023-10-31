@@ -83,7 +83,6 @@
   text-decoration: none;
   border-radius: 50px;
   border: 1px solid #4CA4C6;
-  width: 150px;
   /* Ancho automático para adaptarse al contenido */
   max-width: 100%;
   margin: 5px;
@@ -118,7 +117,7 @@
 .tiempo-espera-value {
   color: #333;
   font-family: "Open Sans-SemiBold", Helvetica;
-  font-size: 30px;
+  font-size: 48px;
   /* Reducir el tamaño de fuente en pantallas más pequeñas */
   font-weight: 600;
 }

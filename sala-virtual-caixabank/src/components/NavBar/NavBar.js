@@ -8,8 +8,23 @@ const NavBar = () => {
   const [tiempoRestante, setTiempoRestante] = useState(300); // 5 minutos en segundos
   const tiempoTotal = 300; // 5 minutos en segundos
   const [titulo, setTitulo] = useState('Sala Virtual');
+  const [posicionEnCola, setPosicionEnCola] = useState(0);
 
   const minutosRestantes = Math.floor(tiempoRestante / 60);
+
+  // Función para asignar la posición en la cola
+  const asignarPosicion = () => {
+    const posicion = localStorage.getItem('posicionEnCola');
+    if (posicion) {
+      setPosicionEnCola(Number(posicion));
+    } else {
+      setPosicionEnCola(1); // Si no hay posición previa, asigna 1 como posición inicial
+    }
+  };
+
+  useEffect(() => {
+    asignarPosicion(); // Asigna la posición al cargar la página
+  }, []);
 
   useEffect(() => {
     const barra = document.querySelector('.tiempo-espera-fill');
@@ -61,10 +76,10 @@ const NavBar = () => {
           {titulo}
         </div>
         <div className="sala-buttons">
+          <button className="botn-secundario">Cancelar</button>
           <Link to="/modificar-cita" className="boton-secondario-modificar">
             Modificar
           </Link>
-          <button className="botn-secundario">Cancelar</button>
         </div>
       </div>
       <div className="tiempo-espera">
@@ -76,7 +91,9 @@ const NavBar = () => {
           <div className="tiempo-espera-fill"></div>
         </div>
       </div>
-      <p className='sala-p'>Puesto en la cola: 4</p>
+      <p className='sala-p'>
+        Tu posición en la cola: {posicionEnCola}
+      </p>
       <div className="sala-buttons2">
         <ActionButtons />
       </div>
