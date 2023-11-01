@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../../images/Logo-CaixaBank-1 1.png';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
 import ActionButtons from '../ActionButtons/ActionButtons';
 import axios from 'axios';
@@ -14,6 +15,8 @@ const NavBar = () => {
   const [titulo, setTitulo] = useState('Sala Virtual');
   const storedPosition = localStorage.getItem('posicionEnCola');
   const [posicionEnCola, setPosicionEnCola] = useState(storedPosition ? parseInt(storedPosition, 10) : 0);
+  const navigate = useNavigate();
+
 
   const minutosRestantes = Math.floor(tiempoRestante / 60);
 
@@ -54,7 +57,7 @@ const NavBar = () => {
     }, 1000);
 
     if (tiempoRestante <= 0) {
-      window.location.href = '/tu-turno';
+      navigate('/tu-turno');
     }
 
     return () => {
