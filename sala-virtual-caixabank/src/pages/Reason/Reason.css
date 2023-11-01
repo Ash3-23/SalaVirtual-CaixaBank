@@ -162,6 +162,10 @@
   width: 100%;
 }
 
+.underline-link {
+  text-decoration-line: none;
+}
+
 @media (max-width: 768px) {
   .desktop-content-reason-page {
     /* Estilos específicos para dispositivos móviles (ancho máximo de 768px) */

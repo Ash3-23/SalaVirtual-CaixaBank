@@ -3,11 +3,8 @@ import LogoCaixa from '../../components/LogoCaixa/LogoCaixa';
 import './FeedBackPage.css';
 import emoji1 from '../../images/emoji1.png'
 import emoji2 from '../../images/emoji2.png'
-
 import emoji3 from '../../images/emoji3.png'
-
 import emoji4 from '../../images/emoji4.png'
-
 import emoji5 from '../../images/emoji5.png'
 
 

@@ -53,6 +53,8 @@ const WaitTimeBar = () => {
 
     if (tiempoRestante <= 0) {
       navigate('/tu-turno');
+      // Borra la posición en la cola del Local Storage
+      localStorage.removeItem('posicionEnCola');
     }
 
     return () => {

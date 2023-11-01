@@ -6,8 +6,6 @@ import NavBarTitleButtons from '../../components/NavBarTitleButtons/NavBarTitleB
 import LogoCaixa from '../../components/LogoCaixa/LogoCaixa';
 import chat from '../../images/chat-text.png';
 import two from '../../images/two.png';
-import Calendar from 'react-calendar';
-import { useNavigate } from 'react-router-dom';
 
 const Reason = () => {
   const [inputValue, setInputValue] = useState('');
@@ -49,13 +47,13 @@ const Reason = () => {
 
               <div className="box-reason-page">
 
-                <button
-                  className={`continuar-button-2 ${inputValue ? 'blue' : ''}`}
-                  onClick={() => {
-                  }}
-                >
-                  Continuar
-                </button>
+              <Link className='underline-link' to="/check-in"> {/* Agrega un enlace al botón */}
+                  <button
+                    className={`continuar-button-2 ${inputValue ? 'blue' : ''}`}
+                  >
+                    Continuar
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

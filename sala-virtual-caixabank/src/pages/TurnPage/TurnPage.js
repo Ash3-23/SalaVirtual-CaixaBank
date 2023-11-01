@@ -19,7 +19,7 @@ const TuTurno = () => {
     // Después de 1 minuto (60000 milisegundos), mostrar el botón de cierre
     const timeout = setTimeout(() => {
       setShowCloseButton(true);
-    }, 6000);
+    }, 3000);
 
     return () => clearTimeout(timeout);
   }, []);

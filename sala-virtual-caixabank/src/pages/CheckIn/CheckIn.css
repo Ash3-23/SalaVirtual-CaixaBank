@@ -1,0 +1,184 @@
+/* CheckIn.css */
+
+/* Estilos para el contenedor principal del componente */
+.desktop-content-reason-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+/* Estilos para el logotipo */
+.logo-caixabank {
+  max-width: 200px; /* Ajusta el tamaño según tus necesidades */
+}
+
+/* Estilos para la barra de tiempo de espera */
+.wait-time-bar {
+  /* Agrega estilos para la barra de tiempo de espera si es necesario */
+}
+
+/* Estilos para los botones de la barra de título de navegación */
+.nav-bar-title-buttons {
+  /* Agrega estilos para los botones de la barra de título de navegación si es necesario */
+}
+
+/* Estilos para el componente de CheckIn */
+.check-in-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px; /* Margen personalizado según tus necesidades */
+}
+
+/* Estilos para el ícono Bootstrap */
+.check-in-icon-bootstrap {
+  width: 80px; /* Ajusta el tamaño según tus necesidades */
+}
+
+/* Estilos para el texto principal */
+.check-in-text-wrapper {
+  color: #333333;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* Estilos para el grupo de superposición */
+.check-in-overlap-group {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 185px;
+  width: 352px;
+  margin-top: 20px; /* Espacio superior personalizado según tus necesidades */
+}
+
+/* Estilos para el texto "Detalles de la cita" */
+.check-in-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666666;
+  padding-left: 20px;
+  padding-top: 10px;
+  font-weight: 600; /* Ajusta el peso de la fuente según tus necesidades */
+}
+
+/* Estilos para la información de la cita */
+.check-in-fecha-de {
+  font-family: "Open Sans-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  padding-left: 20px;
+}
+
+/* Estilos para el marco de "Te atenderá" */
+.check-in-frame {
+  margin-top: 20px; /* Espacio superior personalizado según tus necesidades */
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 115px;
+}
+
+/* Estilos para el texto "Te atenderá" */
+.check-in-text-wrapper-2 {
+  color: #666666;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  padding: 10px;
+  line-height: 27px; /* Margen inferior personalizado según tus necesidades */
+}
+
+/* Estilos para el segundo marco */
+.check-in-frame-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  padding-left: 20px;
+  margin-bottom: 20px; /* Margen inferior personalizado según tus necesidades */
+}
+
+/* Estilos para el tercer marco */
+.check-in-frame-3 {
+  margin-right: 10px; /* Margen derecho personalizado según tus necesidades */
+}
+
+/* Estilos para la elipse */
+.check-in-ellipse {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Ajusta el tamaño según tus necesidades */
+  padding: 10px;
+}
+
+/* Estilos para el texto "MARIA DEL CARMEN LOPEZ" */
+.check-in-text-wrapper-4 {
+  color: #333333;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.finish-button {
+  background-color: #007eae;
+  font-size: 18px;
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  border: none;
+  margin-top: 20px; /* Ajusta el margen superior según tu diseño */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 1px 4px 4px #00000040;
+}
+
+.finish-button:hover {
+  background-color: #2f76c1e4;
+}
+
+
+
+/* Media query para pantallas de tamaño pequeño, como smartphones */
+@media (max-width: 768px) {
+  .desktop-content-reason-page {
+    /* Modifica los estilos para centrar contenido en pantallas pequeñas */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-caixabank {
+    max-width: 150px; /* Reduzca el tamaño del logotipo en pantallas más pequeñas */
+  }
+
+  .check-in-component {
+    margin: 10px; /* Ajusta el margen en pantallas más pequeñas */
+  }
+
+  .check-in-icon-bootstrap {
+    width: 60px; /* Reduzca el tamaño del ícono en pantallas más pequeñas */
+  }
+
+  .check-in-text-wrapper {
+    font-size: 20px; /* Ajusta el tamaño del texto principal en pantallas más pequeñas */
+  }
+}
+
+/* Otras media queries para ajustar estilos adicionales según sea necesario */

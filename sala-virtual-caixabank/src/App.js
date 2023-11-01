@@ -8,6 +8,7 @@ import { TimeProvider } from './context/TimeContext/TimeContext'; // Importa el 
 import FeedBackPage from './pages/FeedBackPage/FeedBackPage';
 import DatesPage from './pages/DatesPage/DatesPage';
 import Reason from './pages/Reason/Reason';
+import { CheckIn } from './pages/CheckIn/CheckIn';
 
 
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/modificar-cita" element={<ModificatedPage />} />
             <Route path="/date" element={<DatesPage />} />
             <Route path="/reason" element={<Reason />} />
+            <Route path="/check-in" element={<CheckIn />} />
             <Route element={<HeaderLayout />}>
               {/* A PARTIR DE AQUÍ LAS PÁGINAS SE MUESTRAN CON EL HEADERLAYOUT Y EL MENU PRINCIPAL DE LA PÁGINA */}
             </Route>
