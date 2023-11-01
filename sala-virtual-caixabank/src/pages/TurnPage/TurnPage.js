@@ -10,6 +10,11 @@ const TuTurno = () => {
   return (
     <div className="desktop-content">
       <LogoCaixa />
+      <div className="sala-details-turn-page">
+        <div className='sala-title-turn-page'>
+          Sala Virtual
+        </div>
+      </div>
 
       <div className="desktop-modal-su">
         <div className="div-2">
