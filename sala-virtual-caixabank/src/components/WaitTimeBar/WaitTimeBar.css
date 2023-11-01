@@ -12,13 +12,13 @@
   font-size: 20px; /* Reducido el tamaño de fuente */
   font-weight: 600;
   letter-spacing: -0.26px;
-  line-height: 26px; /* Reducido el espaciado de línea */
+  line-height: 40px; /* Reducido el espaciado de línea */
 }
 
 .tiempo-espera-value-wait-time {
   color: #000000cc;
   font-size: 28px; /* Reducido el tamaño de fuente */
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .tiempo-espera-barra-wait-time {

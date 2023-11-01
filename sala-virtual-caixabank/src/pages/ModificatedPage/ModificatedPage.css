@@ -75,6 +75,10 @@
   width: 2%;
 }
 
+.underline-link{
+  text-decoration-line: none;
+}
+
 /* Estilos responsivos para dispositivos móviles */
 @media (max-width: 768px) {
   .custom-https-lottiefiles-modificated-page {

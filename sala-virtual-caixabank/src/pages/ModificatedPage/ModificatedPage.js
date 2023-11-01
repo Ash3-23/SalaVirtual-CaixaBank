@@ -21,23 +21,28 @@ const ModificatedPage = () => {
           <div className="custom-component-modificated-page">
             <img className="custom-https-lottiefiles-modificated-page" alt="Https lottiefiles" src={people} />
             <p className="custom-text-wrapper-modificated-page">¿Quieres cambiar la cita?</p>
-            <div className="custom-frame-modificated-page">
-              <div className="custom-text-wrapper-8-modificated-page">Presencial</div>
-              <img alt='arrow' src={arrow} className='arrow' />
-            </div>
-            <div className="custom-frame-modificated-page">
-              <div className="custom-text-wrapper-8-modificated-page">Videollamada</div>
-              <img alt='arrow' src={arrow} className='arrow' />
-            </div>
-            <div className="custom-frame-modificated-page">
-              <div className="custom-text-wrapper-8-modificated-page">Gestor online</div>
-              <img alt='arrow' src={arrow} className='arrow' />
-            </div>
+            <Link to='/date' className='underline-link'>
+              <div className="custom-frame-modificated-page">
+                <div className="custom-text-wrapper-8-modificated-page">Presencial</div>
+                <img alt='arrow' src={arrow} className='arrow' />
+              </div>
+            </Link>
+            <Link to='/date' className='underline-link'>
+              <div className="custom-frame-modificated-page">
+                <div className="custom-text-wrapper-8-modificated-page">Videollamada</div>
+                <img alt='arrow' src={arrow} className='arrow' />
+              </div>
+            </Link>
 
+            <Link to='/date' className='underline-link'>
+              <div className="custom-frame-modificated-page">
+                <div className="custom-text-wrapper-8-modificated-page">Gestor online</div>
+                <img alt='arrow' src={arrow} className='arrow' />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
-
     </div>
   )
 }
