@@ -6,6 +6,7 @@ import emoji2 from '../../images/emoji2.png'
 import emoji3 from '../../images/emoji3.png'
 import emoji4 from '../../images/emoji4.png'
 import emoji5 from '../../images/emoji5.png'
+import { Link } from 'react-router-dom';
 
 
 const FeedBackPage = () => {
@@ -62,9 +63,11 @@ const FeedBackPage = () => {
           <p>{feedback.length}/150</p>
         </div>
         {showFinalizar && (
-          <button className="finalizar-button" onClick={handleFinalizarClick}>
-            Finalizar
-          </button>
+          <Link to='/thanks'>
+            <button className="finalizar-button" onClick={handleFinalizarClick}>
+              Finalizar
+            </button>
+          </Link>
         )}
       </div>
     </div>

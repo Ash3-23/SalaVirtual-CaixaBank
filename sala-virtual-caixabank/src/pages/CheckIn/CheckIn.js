@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./CheckIn.css";
-import WaitTimeBar from '../../components/WaitTimeBar/WaitTimeBar';
 import NavBarTitleButtons from '../../components/NavBarTitleButtons/NavBarTitleButtons';
 import LogoCaixa from '../../components/LogoCaixa/LogoCaixa';
 import check from '../../images/check2.png';
@@ -15,7 +14,6 @@ export const CheckIn = () => {
         <LogoCaixa className='logo-caixabank' />
       </Link>
       <NavBarTitleButtons />
-      <WaitTimeBar />
       <div className="check-in-component">
         <img className="check-in-icon-bootstrap" alt='icon-check' src={check} />
         <p className="check-in-text-wrapper">¡Su cita ha sido confirmada!</p>
