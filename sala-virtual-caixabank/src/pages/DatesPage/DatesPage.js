@@ -7,6 +7,8 @@ import LogoCaixa from '../../components/LogoCaixa/LogoCaixa';
 import check from '../../images/calendar2-check.png';
 import one from '../../images/one.png';
 import Calendar from 'react-calendar';
+import { useNavigate } from 'react-router-dom';
+
 
 import 'react-calendar/dist/Calendar.css'; // Importa los estilos de react-calendar
 
@@ -14,17 +16,22 @@ const DatesPage = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState(''); // Estado para almacenar la hora seleccionada
   const [showContinueButton, setShowContinueButton] = useState(false); // Nuevo estado para mostrar el botón "Continuar"
+  const navigate = useNavigate(); // Obten la función navigate
+
 
 
   const handleTimeSelection = (time) => {
     setSelectedTime(time);
     setShowContinueButton(true);
+  };
+  const navigateToReason = () => {
+    navigate('/reason'); // Utiliza la función navigate para redirigir a /reason
   }
 
   return (
     <div className="desktop-content-dates-page">
       <Link to="/">
-        <LogoCaixa className='logo-caixabank'/>
+        <LogoCaixa className='logo-caixabank' />
       </Link>
       <NavBarTitleButtons />
       <WaitTimeBar />
@@ -58,7 +65,7 @@ const DatesPage = () => {
                   <p className='selection-date-wrapper'>Fecha seleccionada: </p>
                   <p className='selection-date'>{selectedDate.toDateString()} a las {selectedTime}</p>
                   {showContinueButton && ( // Mostrar el botón "Continuar" cuando se ha seleccionado la fecha y la hora
-                    <button className="continuar-button">Continuar</button>
+                    <button className="continuar-button" onClick={navigateToReason}>Continuar</button>
                   )}
                 </div>
               </div>
