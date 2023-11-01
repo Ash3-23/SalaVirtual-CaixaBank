@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import logo from '../../images/Logo-CaixaBank-1 1.png';
+import './LogoCaixa.css'
 
 const LogoCaixa = () => {
   return (
-      <img className="logo-caixabank" alt="Logo caixabank" src={logo} />
+      <img className="logo-caixabank-logo-component" alt="Logo caixabank" src={logo} />
   );
 };
 

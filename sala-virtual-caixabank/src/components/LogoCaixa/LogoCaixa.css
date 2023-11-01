@@ -1,5 +1,6 @@
 /* LogoCaixa.css */
-.logo-caixabank {
+.logo-caixabank-logo-component {
   max-width: 350px;
   width: 100%;
+  padding-right: 50px;
 }
