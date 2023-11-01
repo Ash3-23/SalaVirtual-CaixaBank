@@ -9,29 +9,60 @@ import two from '../../images/two.png';
 import Calendar from 'react-calendar';
 import { useNavigate } from 'react-router-dom';
 
-
 const Reason = () => {
+  const [inputValue, setInputValue] = useState('');
+  const [isInputFocused, setInputFocused] = useState(false);
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
   return (
-    <div className="desktop-content-dates-page">
+    <div className="desktop-content-reason-page">
       <Link to="/">
         <LogoCaixa className='logo-caixabank' />
       </Link>
       <NavBarTitleButtons />
       <WaitTimeBar />
-      <div className="custom-div-2-dates-page">
-        <div className="custom-overlap-group-dates-page">
-          <div className="custom-component-dates-page">
-            <img className="custom-https-lottiefiles-dates-page" alt="Https lottiefiles" src={chat} />
-            <div className='first-condition'>
-              <p className="custom-text-wrapper-dates-page">
-                <img className='first-position' alt='1' src={two} />Planificar
+      <div className="custom-div-2-reason-page">
+        <div className="custom-overlap-group-reason-page">
+          <div className="custom-component-reason-page">
+            <img className="custom-https-lottiefiles-reason-page" alt="Https lottiefiles" src={chat} />
+            <div className='first-condition-reason'>
+              <p className="custom-text-wrapper-reason-page">
+                <img className='first-position-reason' alt='1' src={two} />
+                Detallar
               </p>
+              <div className="component-reason-page">
+                <p className="p-reason-page">Indica el motivo de la cita:</p>
+                <textarea
+                  rows="4"
+                  value={inputValue}
+                  onChange={handleInputChange}
+                  className="reason-input"
+                  placeholder="Escribe aquí el motivo"
+                  onFocus={() => setInputFocused(true)}
+                  onBlur={() => setInputFocused(false)}
+                />
+                <p className='input-value-reason'>{inputValue.length}/150</p>
+              </div>
+
+              <div className="box-reason-page">
+
+                <button
+                  className={`continuar-button-2 ${inputValue ? 'blue' : ''}`}
+                  onClick={() => {
+                  }}
+                >
+                  Continuar
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Reason
+export default Reason;
