@@ -49,10 +49,11 @@
 
 
 .blue-text {
-  color: #007eae; /* Color azul de Caixa */
+  color: #007eae;
+  /* Color azul de Caixa */
 }
 
-.subtitle-h3 h3{
+.subtitle-h3 h3 {
   display: flex;
   flex-wrap: wrap;
   color: #000000cc;
@@ -64,33 +65,55 @@
   line-height: 30px;
 }
 
-.reaction-emoji{
+.reaction-emoji {
   width: 60px;
   padding: 20px;
 }
 
-.feedback-container h2{
+.feedback-container h2 {
   font-size: 28px;
 }
 
 .finalizar-button {
   font-size: 18px;
   padding: 10px 20px;
-  background-color: #007eae; /* Color de fondo azul */
-  color: #ffffff; /* Color del texto blanco */
+  background-color: #007eae;
+  /* Color de fondo azul */
+  color: #ffffff;
+  /* Color del texto blanco */
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin: 10px;
 }
-.finalizar-button:hover{
-  transform: scale(1.1); /* Escala el emoji al 110% del tamaño original en hover */
-  transition: transform 0.3s; /* Agrega una transición suave */
+
+.finalizar-button:hover {
+  transform: scale(1.1);
+  /* Escala el emoji al 110% del tamaño original en hover */
+  transition: transform 0.3s;
+  /* Agrega una transición suave */
 }
 
 .reaction-emoji:hover {
-  transform: scale(1.1); /* Escala el emoji al 110% del tamaño original en hover */
-  transition: transform 0.3s; /* Agrega una transición suave */
+  transform: scale(1.1);
+  /* Escala el emoji al 110% del tamaño original en hover */
+  transition: transform 0.3s;
+  /* Agrega una transición suave */
+}
+
+/* Media Query para dispositivos móviles (ancho máximo de 768px) */
+@media (max-width: 768px) {
+  .reaction-emoji {
+    width: 15%;
+    padding: 0;
+  }
+
+  .feedback-container .emoji-container button {
+    font-size: 10vw;
+    /* Ajustar el tamaño de fuente para dispositivos móviles */
+    padding: 4%;
+    /* Ajustar el espaciado interno de los emojis en dispositivos móviles */
+  }
 }
 
 /* .feedback-container {
