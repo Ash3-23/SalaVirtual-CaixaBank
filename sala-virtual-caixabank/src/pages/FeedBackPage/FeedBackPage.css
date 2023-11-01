@@ -1,0 +1,168 @@
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 50px;
+}
+
+.feedback-container .emoji-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.feedback-container .emoji-container button {
+  font-size: 36px;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.feedback-container .feedback-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.feedback-container .feedback-input textarea {
+  border: 1px solid #000000cc;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  max-width: 100%;
+  height: 150px;
+  resize: none;
+}
+
+.feedback-container .feedback-input p {
+  text-align: center;
+}
+
+
+.blue-text {
+  color: #007eae; /* Color azul de Caixa */
+}
+
+.subtitle-h3 h3{
+  display: flex;
+  flex-wrap: wrap;
+  color: #000000cc;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: -0.26px;
+  line-height: 30px;
+}
+
+.reaction-emoji{
+  width: 60px;
+  padding: 20px;
+}
+
+.feedback-container h2{
+  font-size: 28px;
+}
+
+.finalizar-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #007eae; /* Color de fondo azul */
+  color: #ffffff; /* Color del texto blanco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+.finalizar-button:hover{
+  transform: scale(1.1); /* Escala el emoji al 110% del tamaño original en hover */
+  transition: transform 0.3s; /* Agrega una transición suave */
+}
+
+.reaction-emoji:hover {
+  transform: scale(1.1); /* Escala el emoji al 110% del tamaño original en hover */
+  transition: transform 0.3s; /* Agrega una transición suave */
+}
+
+/* .feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 2% 0;
+}
+
+.feedback-container .emoji-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1% 0;
+}
+
+.feedback-container .emoji-container button {
+  font-size: 5vw;
+  padding: 1%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.feedback-container .feedback-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  width: 80%;
+  margin: 1% auto;
+}
+
+.feedback-container .feedback-input textarea {
+  border: 1px solid #000000cc;
+  border-radius: 4px;
+  padding: 1%;
+  width: 100%;
+  max-width: 100%;
+  resize: none;
+  font-size: 2.5vw;
+}
+
+.feedback-container .feedback-input p {
+  text-align: center;
+}
+
+.blue-text {
+  color: #007eae;
+}
+
+.subtitle-h3 h3 {
+  display: flex;
+  flex-wrap: wrap;
+  color: #000000cc;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-size: 2.5vw;
+  font-weight: 400;
+  letter-spacing: -0.15px;
+  line-height: 1.3;
+}
+
+.reaction-emoji {
+  width: 10%;
+  padding: 1%;
+}
+
+.feedback-container h2 {
+  font-size: 3vw;
+} */

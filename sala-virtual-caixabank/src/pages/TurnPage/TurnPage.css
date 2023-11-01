@@ -246,6 +246,23 @@
 }
 
 
+.close-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333; /* Color del texto */
+}
+
+/* Estiliza el botón al pasar el mouse por encima */
+.close-button:hover {
+  color: #007eae;
+}
+
+
 @media (max-width: 768px) {
 
   .desktop-modal-su {
