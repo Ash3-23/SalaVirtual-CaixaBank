@@ -247,7 +247,7 @@
 
 
 .close-button {
-  position: fixed;
+  position: absolute;
   top: 15px;
   right: 15px;
   background: none;
@@ -299,6 +299,14 @@
     /* Ajusta el espacio entre líneas */
   }
 
+  .your-turn{
+    padding: 20px;
+  }
+  .desktop-modal-su .text-wrapper-2{
+    padding: 0;
+  }
+
+
   .icon-img {
     padding-left: 20px;
     width: 40%;
@@ -333,7 +341,7 @@
 .close-button{
   border: 2px solid rgb(255, 255, 255);
   color: white;
-  border-radius: 17px;
+  border-radius: 20px;
 }
 .close-button:hover {
   transform: scale(1.1); /* Escala el emoji al 110% del tamaño original en hover */

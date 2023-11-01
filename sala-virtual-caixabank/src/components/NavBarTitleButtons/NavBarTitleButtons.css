@@ -1,5 +1,4 @@
-/* NavBarTitleButtons.css */
-.sala-details {
+.sala-details-second-navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -12,45 +11,38 @@
   gap: 200px;
 }
 
-.sala-title {
+.sala-title-second-navbar {
   color: #ffffff;
   font-family: "Open Sans-SemiBold", Helvetica;
   font-size: 46px;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 30px;
   padding: 20px;
   white-space: nowrap;
   opacity: 1;
-  animation: fade-in 1s ease-in-out;
-  transform: translateX(0%);
+  animation: moveRight 1s ease-in-out;
+  /* Aplica la animación de moveRight */
 }
 
-.sala-buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
+
+@media (max-width: 768px) {
+
+  .sala-details-second-navbar {
+    padding: 3%;
+    flex-direction: column;
+    font-size: 40px;
+
+  }
 }
 
-.boton-secondario-modificar,
-.boton-secondario-modificar,
-.botn-secundario {
-  background: #fff;
-  color: #007EAE;
-  font-size: 22px;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 50px;
-  border: 1px solid #4CA4C6;
-  max-width: 100%;
-  margin: 5px;
-  transition: background-color 0.3s, color 0.3s;
-}
+@keyframes moveRight {
+  0% {
+    transform: translateX(-120%);
+    /* Empieza desde la izquierda (fuera de la pantalla) */
+  }
 
-.boton-secondario-modificar:hover,
-.botn-secundario:hover {
-  background: #007dae;
-  color: #fff;
+  100% {
+    transform: translateX(0%);
+    /* Termina en su posición original */
+  }
 }

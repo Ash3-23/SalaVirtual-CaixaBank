@@ -1,26 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import ActionButtons from '../ActionButtons/ActionButtons';
+import React, { useEffect, useState } from 'react';
+import './NavBarTitleButtons.css'
 
-const NavBarTitleButtons = ({ titulo, minutosRestantes, posicionEnCola }) => {
+
+const NavBarTitleButtons = () => {
+  const [titulo, setTitulo] = useState('Sala Virtual');
+
+
+
+  useEffect(() => {
+    // Verifica si el mensaje de bienvenida ya se mostró antes
+    const bienvenidaYaMostrada = localStorage.getItem('bienvenidaMostrada');
+
+    if (!bienvenidaYaMostrada) {
+      // Mostrar el mensaje de bienvenida por primera vez
+      setTitulo('Bienvenido!');
+
+      // Establecer un temporizador para cambiar a "Sala Virtual" después de 5 segundos
+      setTimeout(() => {
+        setTitulo('Sala Virtual');
+        // Marcar que la bienvenida se ha mostrado en localStorage
+        localStorage.setItem('bienvenidaMostrada', 'true');
+      }, 5000); // Cambia después de 5 segundos
+    }
+  }, []);
   return (
-    <div className="sala-details">
-      <div className={`sala-title`}>{titulo}</div>
-      <div className="sala-buttons">
-        <button className="botn-secundario">Cancelar</button>
-        <Link to="/modificar-cita" className="boton-secondario-modificar">
-          Modificar
-        </Link>
+    <div className="sala-details-second-navbar">
+      <div className="sala-title-second-navbar">
+        {titulo}
       </div>
-      <div className="tiempo-espera">
-        <div className="tiempo-espera-label">Tiempo de espera estimado</div>
-        <div className="tiempo-espera-value">{minutosRestantes} min</div>
-        <div className="tiempo-espera-barra">
-          <div className="tiempo-espera-fill"></div>
-        </div>
-      </div>
-      <p className='sala-p'>Tu posición en la cola: {posicionEnCola}</p>
-      <ActionButtons />
     </div>
   );
 };

@@ -1,0 +1,101 @@
+.desktop-content-modificated-page {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.custom-div-2-modificated-page {
+  width: 100%;
+  max-width: 100%;
+}
+
+.custom-overlap-group-modificated-page {
+  height: auto;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.custom-component-modificated-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  padding-bottom: 50px;
+}
+
+.custom-text-wrapper-modificated-page {
+  color: #666666;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.custom-https-lottiefiles-modificated-page {
+  width: 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.custom-frame-modificated-page {
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: space-around; /* Centra el contenido horizontalmente */
+  gap: 300px;
+  border-radius: 6px;
+  box-shadow: 10px 4px 4px #00000040;
+  height: 70px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 20px; /* Agrega espacio entre las cajas de marco */
+
+  /* Agrega transiciones para el efecto hover */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Cuando el ratón está encima, escala el elemento */
+.custom-frame-modificated-page:hover {
+  transform: scale(1.05); /* Escala al 110% del tamaño original */
+}
+
+.custom-text-wrapper-8-modificated-page {
+  color: #666666;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-size: 26px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: -0.18px;
+  line-height: 20px;
+}
+.arrow{
+  width: 2%;
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+  .custom-https-lottiefiles-modificated-page {
+    width: 60px;
+  }
+
+  .custom-frame-modificated-page {
+    height: 50px;
+    margin-bottom: 15px; /* Ajusta el margen inferior para dispositivos móviles */
+    padding: 20px;
+    gap: 150px;
+    width: 80%;
+  }
+
+  /* Escala ligeramente menos en dispositivos móviles para compensar el espacio más estrecho */
+  .custom-frame-modificated-page:hover {
+    transform: scale(1.05); /* Escala al 105% del tamaño original */
+  }
+
+  .custom-text-wrapper-8-modificated-page {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}

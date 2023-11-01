@@ -1,0 +1,55 @@
+/* Estilos para WaitTimeBar */
+.tiempo-espera-wait-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2%;
+}
+
+.tiempo-espera-label-wait-time {
+  color: #666666;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-size: 20px; /* Reducido el tamaño de fuente */
+  font-weight: 600;
+  letter-spacing: -0.26px;
+  line-height: 26px; /* Reducido el espaciado de línea */
+}
+
+.tiempo-espera-value-wait-time {
+  color: #000000cc;
+  font-size: 28px; /* Reducido el tamaño de fuente */
+  font-weight: 400;
+}
+
+.tiempo-espera-barra-wait-time {
+  width: 100%;
+  background-color: #ddd; /* Color de fondo de la barra de tiempo */
+  border-radius: 8px; /* Reducida la curvatura de los bordes */
+  height: 8px; /* Altura de la barra de tiempo reducida */
+  margin: 8px 0; /* Margen reducido */
+}
+
+.tiempo-espera-fill-wait-time {
+  background-color: #007eae; /* Color de relleno de la barra de tiempo */
+  height: 100%;
+  border-radius: 8px; /* Reducida la curvatura de los bordes */
+  width: 50%; /* Ancho de la barra de tiempo que se ajustará dinámicamente */
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+  .tiempo-espera-label-wait-time {
+    font-size: 18px; /* Reducido aún más el tamaño de fuente para dispositivos móviles */
+    line-height: 20px; /* Ajustado el espaciado de línea */
+  }
+
+  .tiempo-espera-value-wait-time {
+    font-size: 28px; /* Mantenido el tamaño de fuente para resaltar el valor del tiempo */
+  }
+
+  .tiempo-espera-barra-wait-time {
+    height: 5px;
+    border-radius: 6px; /* Reducida la curvatura de los bordes para dispositivos móviles */
+    margin: 5px 0; /* Margen reducido aún más */
+  }
+}
