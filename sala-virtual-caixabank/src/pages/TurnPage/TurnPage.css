@@ -53,6 +53,8 @@
   justify-content: center;
   max-width: 100%;
   padding-top: 15px;
+  padding-bottom: 50px;
+
 }
 
 .desktop-modal-su .rectangle {
@@ -93,7 +95,7 @@
 }
 
 .desktop-modal-su .counter {
-  width: 15%;
+  width: 11%;
 }
 
 .desktop-modal-su .boton-modificar-instance,
@@ -157,7 +159,6 @@
   max-width: 600px;
   /* Limitar el ancho máximo */
   margin: 0 auto;
-  /* Centrar el marco horizontalmente */
 }
 
 .desktop-modal-su .text-wrapper-5 {
