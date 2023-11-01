@@ -24,7 +24,7 @@ const DatesPage = () => {
   return (
     <div className="desktop-content-dates-page">
       <Link to="/">
-        <LogoCaixa />
+        <LogoCaixa className='logo-caixabank'/>
       </Link>
       <NavBarTitleButtons />
       <WaitTimeBar />
@@ -55,12 +55,12 @@ const DatesPage = () => {
                     <button className="hour-button" onClick={() => handleTimeSelection("3:00 PM")}>3:00 PM</button>
                     <button className="hour-button" onClick={() => handleTimeSelection("5:00 PM")}>5:00 PM</button>
                   </div>
-                  <p className='selection-date'>Fecha seleccionada:  <p>{selectedDate.toDateString()} a las {selectedTime}</p></p>
-                 
+                  <p className='selection-date-wrapper'>Fecha seleccionada: </p>
+                  <p className='selection-date'>{selectedDate.toDateString()} a las {selectedTime}</p>
+                  {showContinueButton && ( // Mostrar el botón "Continuar" cuando se ha seleccionado la fecha y la hora
+                    <button className="continuar-button">Continuar</button>
+                  )}
                 </div>
-                {showContinueButton && ( // Mostrar el botón "Continuar" cuando se ha seleccionado la fecha y la hora
-                <button className="continuar-button">Continuar</button>
-              )}
               </div>
             </div>
           </div>

@@ -39,7 +39,7 @@ const WaitTimeBar = () => {
   
 
   useEffect(() => {
-    const barra = document.querySelector('.tiempo-espera-fill');
+    const barra = document.querySelector('.tiempo-espera-fill-wait-time');
 
     if (barra) {
       barra.style.width = `${((tiempoTotal - tiempoRestante) / tiempoTotal) * 100}%`;
