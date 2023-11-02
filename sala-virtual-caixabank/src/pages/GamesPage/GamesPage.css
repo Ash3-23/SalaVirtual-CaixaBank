@@ -1,0 +1,22 @@
+/* GamesPage.css */
+/* Estilos para el enlace de retroceso */
+.go-back-link {
+  position: absolute; /* Esto permite posicionar el enlace de forma absoluta */
+  top: 100px; /* Ajusta la distancia desde la parte superior según tu diseño */
+  left: 50px; /* Ajusta la distancia desde la izquierda según tu diseño */
+  text-decoration: none; /* Quita la decoración de texto por defecto */
+}
+
+/* Estilos para el ícono de flecha */
+.back-arrow {
+  font-size: 48px; /* Ajusta el tamaño de la flecha según tus necesidades */
+  font-weight: 700;
+  color: #ffffff; /* Cambia el color de la flecha según tus preferencias */
+  transition: color 0.3s; /* Agrega una transición de color suave */
+  padding: 5px;
+}
+
+/* Cambia el color de la flecha en hover */
+.back-arrow:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega una sombra al texto */
+}

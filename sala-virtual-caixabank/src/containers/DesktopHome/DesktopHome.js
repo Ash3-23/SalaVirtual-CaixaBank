@@ -1,5 +1,6 @@
 import React from "react";
 import "./DesktopHome.css";
+import { Link } from 'react-router-dom';
 import info from '../../images/Frame33699.png';
 import news from '../../images/Frame33691.png';
 import app from '../../images/Frame33692.png';
@@ -21,20 +22,25 @@ const DesktopSala = () => {
           </div>
           <div className="info-frame-text">Oportunidades Caixabank</div>
         </div>
-        <div className="info-frame">
-          <div className="info-frame-icon">
-            <img src={app} alt="info" />
+        <Link className="link-underline" to='/funcionalidades'>
+          <div className="info-frame">
+            <div className="info-frame-icon">
+              <img src={app} alt="info" />
+            </div>
+            <div className="info-frame-text">
+              Qué puedes hacer desde la app
+            </div>
           </div>
-          <div className="info-frame-text">
-            Qué puedes hacer desde la app
+        </Link>
+        <Link className="link-underline" to='/gaming'>
+          <div className="info-frame">
+            <div className="info-frame-icon">
+              <img src={games} alt="info" />
+            </div>
+            <div className="info-frame-text">Juegos interactivos</div>
           </div>
-        </div>
-        <div className="info-frame">
-          <div className="info-frame-icon">
-            <img src={games} alt="info" />
-          </div>
-          <div className="info-frame-text">Juegos interactivos</div>
-        </div>
+        </Link>
+
       </div>
     </div>
   );

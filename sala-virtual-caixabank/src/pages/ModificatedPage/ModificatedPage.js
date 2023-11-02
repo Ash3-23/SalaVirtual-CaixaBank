@@ -11,6 +11,9 @@ import arrow from '../../images/Flecha.png';
 const ModificatedPage = () => {
   return (
     <div className="desktop-content-modificated-page">
+      <Link to="/" className="go-back-link-modificate-page">
+        <span className="back-arrow-modificate-page">←</span>
+      </Link>
       <Link to="/">
         <LogoCaixa />
       </Link>

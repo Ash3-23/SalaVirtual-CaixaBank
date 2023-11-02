@@ -10,6 +10,8 @@ import { useTime } from '../../context/TimeContext/TimeContext'; // Importa el h
 
 const NavBar = () => {
   const { tiempoRestante, setTiempoRestante } = useTime(); // Obtiene el tiempo de espera desde el contexto
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
 
   const tiempoTotal = 300; // 5 minutos en segundos
   const [titulo, setTitulo] = useState('Sala Virtual');
@@ -20,19 +22,35 @@ const NavBar = () => {
 
   const minutosRestantes = Math.floor(tiempoRestante / 60);
 
+
+  const handleCancelarCita = () => {
+    // Muestra la ventana emergente de confirmación
+    setShowConfirmation(true);
+  }
+
+  const handleConfirmCancel = () => {
+    // Realiza la cancelación (puedes agregar tu lógica aquí) y luego redirige a /feedback
+    navigate('/feedback');
+  }
+
+  const handleCancel = () => {
+    // Cierra la ventana emergente de confirmación
+    setShowConfirmation(false);
+  }
+
   useEffect(() => {
     // Verifica si la posición en la cola ya está en el localStorage
     const storedPosition = localStorage.getItem('posicionEnCola');
-    
+
     if (!storedPosition) {
       // Si no está en el localStorage, realiza la solicitud al servidor
       axios.post('http://localhost:4000/agregar-cliente')
         .then((response) => {
           const nuevaPosicion = response.data.posicion;
-    
+
           // Actualiza el estado local con la nueva posición
           setPosicionEnCola(nuevaPosicion);
-    
+
           // Almacena la posición en el localStorage
           localStorage.setItem('posicionEnCola', nuevaPosicion.toString());
         })
@@ -41,7 +59,7 @@ const NavBar = () => {
         });
     }
   }, []);
-  
+
 
   useEffect(() => {
     const barra = document.querySelector('.tiempo-espera-fill');
@@ -92,10 +110,20 @@ const NavBar = () => {
           {titulo}
         </div>
         <div className="sala-buttons">
-          <button className="botn-secundario">Cancelar</button>
+          <button className="action-buttons-modificar" onClick={handleCancelarCita}>
+            Cancelar
+          </button>
           <Link to="/modificar-cita" className="boton-secondario-modificar">
             Modificar
           </Link>
+          {/* Ventana emergente de confirmación */}
+      {showConfirmation && (
+        <div className="confirmation-popup">
+          <p>¿Estás seguro de que quieres cancelar tu cita?</p>
+          <button onClick={handleConfirmCancel}>Sí</button>
+          <button onClick={handleCancel}>No</button>
+        </div>
+      )}
         </div>
       </div>
       <div className="tiempo-espera">

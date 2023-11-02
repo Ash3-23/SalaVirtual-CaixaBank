@@ -11,6 +11,8 @@ import Reason from './pages/Reason/Reason';
 import { CheckIn } from './pages/CheckIn/CheckIn';
 import FinalPage from './pages/FinalPage/FinalPage';
 import MembersPage from './pages/MembersPage/MembersPage';
+import GamesPage from './pages/GamesPage/GamesPage';
+import FuncionalidadesPage from './pages/FuncionalidadesPage/FuncionalidadesPage';
 
 
 
@@ -29,8 +31,12 @@ function App() {
             <Route path="/check-in" element={<CheckIn />} />
             <Route path="/thanks" element={<FinalPage />} />
             <Route path="/members" element={<MembersPage />} />
+
             <Route element={<HeaderLayout />}>
               {/* A PARTIR DE AQUÍ LAS PÁGINAS SE MUESTRAN CON EL HEADERLAYOUT Y EL MENU PRINCIPAL DE LA PÁGINA */}
+              <Route path="/gaming" element={<GamesPage />} />
+              <Route path="/funcionalidades" element={<FuncionalidadesPage />} />
+
             </Route>
           </Routes>
         </TimeProvider>

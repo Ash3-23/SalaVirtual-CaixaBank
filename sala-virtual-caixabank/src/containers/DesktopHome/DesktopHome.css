@@ -28,6 +28,10 @@
   max-width: 100%;
 }
 
+.link-underline{
+  text-decoration-line: none;
+  color: black;
+}
 .info-frame-text {
   font-family: "Inter-Regular", Helvetica;
   font-size: 20px;
