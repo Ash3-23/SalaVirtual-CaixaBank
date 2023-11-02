@@ -23,6 +23,31 @@ const NavBar = () => {
   const minutosRestantes = Math.floor(tiempoRestante / 60);
 
 
+    // Generar un número aleatorio en el rango del 1 al 50
+    const randomPosition = Math.floor(Math.random() * 50) + 1;
+
+    useEffect(() => {
+      // Verifica si la posición en la cola ya está en el localStorage
+      const storedPosition = localStorage.getItem('posicionEnCola');
+  
+      if (!storedPosition) {
+        // Si no está en el localStorage, realiza la solicitud al servidor
+        axios.post('http://localhost:4000/agregar-cliente')
+          .then((response) => {
+            const nuevaPosicion = response.data.posicion || randomPosition;
+  
+            // Actualiza el estado local con la nueva posición
+            setPosicionEnCola(nuevaPosicion);
+  
+            // Almacena la posición en el localStorage
+            localStorage.setItem('posicionEnCola', nuevaPosicion.toString());
+          })
+          .catch((error) => {
+            console.error('Error al obtener la posición en cola:', error);
+          });
+      }
+    }, [randomPosition]);
+
   const handleCancelarCita = () => {
     // Muestra la ventana emergente de confirmación
     setShowConfirmation(true);
