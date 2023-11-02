@@ -42,7 +42,7 @@ const GamesPage = () => {
           </div>
         </div>
         <div className="info-frame">
-        <a href="https://www.cerebriti.com/juegos-de-matematicas/calculo-mental-rapido" target="_blank" rel="noopener noreferrer" className="info-frame">
+        <a href="https://www.minijuegos.com/juego/quizzland/jugar" target="_blank" rel="noopener noreferrer" className="info-frame">
           <div className="info-frame-icon">
             <img src={trivia} alt="info" />
           </div>
