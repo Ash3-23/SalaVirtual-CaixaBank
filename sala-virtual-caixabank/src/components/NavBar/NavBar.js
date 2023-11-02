@@ -5,86 +5,45 @@ import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
 import ActionButtons from '../ActionButtons/ActionButtons';
 import axios from 'axios';
-import { useTime } from '../../context/TimeContext/TimeContext'; // Importa el hook useTime
-
+import { useTime } from '../../context/TimeContext/TimeContext';
 
 const NavBar = () => {
-  const { tiempoRestante, setTiempoRestante } = useTime(); // Obtiene el tiempo de espera desde el contexto
+  const { tiempoRestante, setTiempoRestante } = useTime();
   const [showConfirmation, setShowConfirmation] = useState(false);
-
-
-  const tiempoTotal = 300; // 5 minutos en segundos
+  const tiempoTotal = 300;
   const [titulo, setTitulo] = useState('Sala Virtual');
   const storedPosition = localStorage.getItem('posicionEnCola');
-  const [posicionEnCola, setPosicionEnCola] = useState(storedPosition ? parseInt(storedPosition, 10) : 0);
+  const [posicionEnCola, setPosicionEnCola] = useState(
+    storedPosition ? parseInt(storedPosition, 10) : 0
+  );
   const navigate = useNavigate();
-
-
   const minutosRestantes = Math.floor(tiempoRestante / 60);
 
+  useEffect(() => {
+    const storedPosition = localStorage.getItem('posicionEnCola');
+    if (!storedPosition) {
+      // Genera un número aleatorio en el rango del 1 al 50
+      const randomPosition = Math.floor(Math.random() * 50) + 1;
 
-    // Generar un número aleatorio en el rango del 1 al 50
-    const randomPosition = Math.floor(Math.random() * 50) + 1;
+      // Almacena el valor aleatorio en localStorage
+      localStorage.setItem('posicionEnCola', randomPosition.toString());
 
-    useEffect(() => {
-      // Verifica si la posición en la cola ya está en el localStorage
-      const storedPosition = localStorage.getItem('posicionEnCola');
-  
-      if (!storedPosition) {
-        // Si no está en el localStorage, realiza la solicitud al servidor
-        axios.post('http://localhost:4000/agregar-cliente')
-          .then((response) => {
-            const nuevaPosicion = response.data.posicion || randomPosition;
-  
-            // Actualiza el estado local con la nueva posición
-            setPosicionEnCola(nuevaPosicion);
-  
-            // Almacena la posición en el localStorage
-            localStorage.setItem('posicionEnCola', nuevaPosicion.toString());
-          })
-          .catch((error) => {
-            console.error('Error al obtener la posición en cola:', error);
-          });
-      }
-    }, [randomPosition]);
+      // Actualiza el estado local con el nuevo valor
+      setPosicionEnCola(randomPosition);
+    }
+  }, []);
 
   const handleCancelarCita = () => {
-    // Muestra la ventana emergente de confirmación
     setShowConfirmation(true);
   }
 
   const handleConfirmCancel = () => {
-    // Realiza la cancelación (puedes agregar tu lógica aquí) y luego redirige a /feedback
     navigate('/feedback');
   }
 
   const handleCancel = () => {
-    // Cierra la ventana emergente de confirmación
     setShowConfirmation(false);
   }
-
-  useEffect(() => {
-    // Verifica si la posición en la cola ya está en el localStorage
-    const storedPosition = localStorage.getItem('posicionEnCola');
-
-    if (!storedPosition) {
-      // Si no está en el localStorage, realiza la solicitud al servidor
-      axios.post('http://localhost:4000/agregar-cliente')
-        .then((response) => {
-          const nuevaPosicion = response.data.posicion;
-
-          // Actualiza el estado local con la nueva posición
-          setPosicionEnCola(nuevaPosicion);
-
-          // Almacena la posición en el localStorage
-          localStorage.setItem('posicionEnCola', nuevaPosicion.toString());
-        })
-        .catch((error) => {
-          console.error('Error al obtener la posición en cola:', error);
-        });
-    }
-  }, []);
-
 
   useEffect(() => {
     const barra = document.querySelector('.tiempo-espera-fill');
@@ -109,19 +68,14 @@ const NavBar = () => {
   }, [tiempoRestante]);
 
   useEffect(() => {
-    // Verifica si el mensaje de bienvenida ya se mostró antes
     const bienvenidaYaMostrada = localStorage.getItem('bienvenidaMostrada');
 
     if (!bienvenidaYaMostrada) {
-      // Mostrar el mensaje de bienvenida por primera vez
       setTitulo('Bienvenido!');
-
-      // Establecer un temporizador para cambiar a "Sala Virtual" después de 5 segundos
       setTimeout(() => {
         setTitulo('Sala Virtual');
-        // Marcar que la bienvenida se ha mostrado en localStorage
         localStorage.setItem('bienvenidaMostrada', 'true');
-      }, 5000); // Cambia después de 5 segundos
+      }, 5000);
     }
   }, []);
 
@@ -141,14 +95,13 @@ const NavBar = () => {
           <Link to="/modificar-cita" className="boton-secondario-modificar">
             Modificar
           </Link>
-          {/* Ventana emergente de confirmación */}
-      {showConfirmation && (
-        <div className="confirmation-popup">
-          <p>¿Estás seguro de que quieres cancelar tu cita?</p>
-          <button onClick={handleConfirmCancel}>Sí</button>
-          <button onClick={handleCancel}>No</button>
-        </div>
-      )}
+          {showConfirmation && (
+            <div className="confirmation-popup">
+              <p>¿Estás seguro de que quieres cancelar tu cita?</p>
+              <button onClick={handleConfirmCancel}>Sí</button>
+              <button onClick={handleCancel}>No</button>
+            </div>
+          )}
         </div>
       </div>
       <div className="tiempo-espera">
