@@ -16,12 +16,14 @@ const DesktopSala = () => {
           </div>
           <div className="info-frame-text">Información sobre su consulta</div>
         </div>
-        <div className="info-frame">
-          <div className="info-frame-icon">
-            <img src={news} alt="info" />
+        <Link className="link-underline" to='/oportunidades'>
+          <div className="info-frame">
+            <div className="info-frame-icon">
+              <img src={news} alt="info" />
+            </div>
+            <div className="info-frame-text">Oportunidades Caixabank</div>
           </div>
-          <div className="info-frame-text">Oportunidades Caixabank</div>
-        </div>
+        </Link>
         <Link className="link-underline" to='/funcionalidades'>
           <div className="info-frame">
             <div className="info-frame-icon">

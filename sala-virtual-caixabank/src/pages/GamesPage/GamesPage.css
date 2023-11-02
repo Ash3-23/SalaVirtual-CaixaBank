@@ -20,3 +20,15 @@
 .back-arrow:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega una sombra al texto */
 }
+
+
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+.go-back-link {
+  position: absolute;
+  top: 19px;
+  left: 11px;
+  text-decoration: none;
+}
+}
