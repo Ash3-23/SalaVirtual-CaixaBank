@@ -23,7 +23,7 @@ const NavBar = () => {
     const storedPosition = localStorage.getItem('posicionEnCola');
     if (!storedPosition) {
       // Genera un número aleatorio en el rango del 1 al 50
-      const randomPosition = Math.floor(Math.random() * 50) + 1;
+      const randomPosition = Math.floor(Math.random() * 15) + 1;
 
       // Almacena el valor aleatorio en localStorage
       localStorage.setItem('posicionEnCola', randomPosition.toString());
